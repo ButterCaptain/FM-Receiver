@@ -8,7 +8,9 @@ A working FM radio receiver built entirely in software. You plug in a $25 RTL-SD
 
 About 100 lines of Python once you strip the comments. Getting it to run without glitches took considerably longer.
 
-<img width="4284" height="5712" alt="IMG_2078" src="https://github.com/user-attachments/assets/12924a47-b4ac-4a0f-9b93-e529f77c6e3c" />
+<img width="300" alt="IMG_2078" src="Media/IMG_2078.jpg" /> <img width="300" alt="IMG_2077" src="Media/IMG_2077.jpg" /> 
+
+<img width="300" alt="IMG_2073" src="Media/IMG_2073.jpg" />
 
 ---
 
