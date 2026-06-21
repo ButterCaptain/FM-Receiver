@@ -8,6 +8,8 @@ A working FM radio receiver built entirely in software. You plug in a $25 RTL-SD
 
 About 100 lines of Python once you strip the comments. Getting it to run without glitches took considerably longer.
 
+<img width="4284" height="5712" alt="IMG_2078" src="https://github.com/user-attachments/assets/12924a47-b4ac-4a0f-9b93-e529f77c6e3c" />
+
 ---
 
 ## Why I Built This
@@ -140,8 +142,7 @@ The main things that were different in C++:
 
 **No `np.angle` shortcut.** The Python polar discriminator is one line. In C++ it expands to the full atan2 formula with the real and imaginary parts of the cross-product computed explicitly. Writing it out made it clearer why it works.
 
-**PortAudio vs sounddevice.** Python's `sounddevice` wraps PortAudio and handles the callback threading for you. In C++ I used PortAudio directly with blocking writes (`Pa_WriteStream`) instead of a callback, which simplified the threading model,<img width="4284" height="5712" alt="IMG_2078" src="https://github.com/user-attachments/assets/12924a47-b4ac-4a0f-9b93-e529f77c6e3c" />
- the DSP loop just writes audio at the end of each iteration and PortAudio blocks until the soundcard is ready.
+**PortAudio vs sounddevice.** Python's `sounddevice` wraps PortAudio and handles the callback threading for you. In C++ I used PortAudio directly with blocking writes (`Pa_WriteStream`) instead of a callback, which simplified the threading model, the DSP loop just writes audio at the end of each iteration and PortAudio blocks until the soundcard is ready.
 
 **Queue design.** Python's `queue.Queue` has `put_nowait` and `get` built in. In C++ I wrote a small `BoundedThreadSafeQueue` using a mutex and `condition_variable`. The bounded drop behavior (drop oldest instead of blocking) was something I had to think through explicitly.
 
