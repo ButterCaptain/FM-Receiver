@@ -16,7 +16,7 @@ About 100 lines of Python once you strip the comments. Getting it to run without
 
 ## Why I Built This
 
-I took signals and systems last year and somewhere in the middle of it I realized that software-defined radio existed, that you could replace a rack of analog hardware with a cheap USB stick and some Python. That felt worth exploring.
+I am absolutely fascinated about RF and realized that software-defined radio existed, that you could replace a rack of analog hardware with a cheap USB stick and some Python. That felt worth exploring.
 
 I used the [RTL-SDR.com](https://www.rtl-sdr.com) blog and the [pyrtlsdr docs](https://pyrtlsdr.readthedocs.io) heavily. I didn't come into this knowing DSP. I learned each piece as I needed it to fix something that was broken. The write-up below reflects that.
 
